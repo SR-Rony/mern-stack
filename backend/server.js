@@ -10,6 +10,8 @@ const app = express()
 
 app.use(express.json())
 
+const PORT = process.env.PORT || 5000
+
 
 app.get("/",(req,res)=>{
     res.send('my server is running and i love backend')
@@ -21,8 +23,8 @@ app.get("/",(req,res)=>{
 app.use("/api/product",productRoute)
 
 
-app.listen(3000,async()=>{
+app.listen(PORT,async()=>{
     await connectDB()
-    console.log(`my server is running at http://localhost:3000`);
+    console.log(`my server is running at http://localhost:${PORT}`);
     
 })
