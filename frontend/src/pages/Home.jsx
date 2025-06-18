@@ -1,9 +1,13 @@
 import React from 'react'
+import { Box, Button, HStack } from "@chakra-ui/react"
 
 const Home = () => {
   return (
     <div>
-        <h1>Welcome to home pages</h1>
+      <HStack>
+        <Button>Click me</Button>
+        <Button>Click me</Button>
+      </HStack>
     </div>
   )
 }
